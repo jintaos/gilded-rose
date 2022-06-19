@@ -1,0 +1,39 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /api/gilded-rose
+
+spring:
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    url: jdbc:h2:file:./h2-db/gildedrose
+    username: gildedrose
+    password: gildedrose
+    driverClassName: org.h2.Driver
+
+#oauth2:
+#  system:
+#    tokenUrl: https://gildedrose.oktapreview.com/oauth2/ausodsfoitnmwe/v1/token
+#    keyRul: https://gildedrose.oktapreview.com/oauth2/ausodsfoitnmwe/v1/keys
+#    clientId: 7777777777777777777777
+#    secret: dfsssssssssssssssssff
+#    scopes: inventory:access purchase:access
+#  okta:
+#    keyUrl: https://auth-pp.gildedrose.com/oauth2/ausodsfoitnmwe/v1/keys
+#    jwks:
+#      cacheLifespanSeconds: 360
+#      refreshTimeSeconds: 300
+#      cacheLifespan: 360
+#      refreshTime: 300
+#    issuer: https://auth-pp.gildedrose.com
+#    authServerId: ausodsfoitnmwe
+#    cllientId: 7777777777777777777777
+
+
